@@ -1,0 +1,347 @@
+/* ----------------------- GERAIS -------------------*/
+body{
+    background-color: #000;
+}
+header {
+    padding: 50px;
+    background: linear-gradient(
+    180deg,
+    rgba(0,-0,-0,-0) 0%,
+    rgba(0, 0, 0, 0) 100%,
+    );
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+header img{
+    width: 150px;
+}
+.btn-custom-white {
+    background-color: #fff;
+}
+.btn-custom-translucent {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+.btn-custom-translucent:hover {
+    color: #fff;
+    opacity: 0.8;
+}
+.btn-custom-white:hover {
+    opacity: 0.8;
+}
+.btn-custom-round{
+    padding: 5px 9px !important;
+}
+.opacity-50{
+    opacity: 0.5;
+}
+.text-titulo {
+    margin-left: -50px;
+    margin-bottom: -10px;
+}
+
+/*--------------------- LOGIN------------------------ */
+.bg_filmes {
+    background-image: url(assets/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#caixa_login{
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+}
+.form-control{
+    background-color: #2c2a2a;
+    border: none;
+}
+.btn-danger{
+    background-color: #e50914;
+    border: none;
+}
+.face-img{
+    margin-left: -8px;
+}
+
+/*--------------------- HOME ------------------------ */
+.menu_list{
+    list-style: none;
+    padding-left: 0;
+    padding-top: 7px;
+}
+.menu_list li{
+    display: inline-block;
+    margin-left: 15px;
+}
+.menu_list li a{
+    color: #ffff;
+}
+#hero {
+    height: 700px;
+    background-image: url(assets/star_trek.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+#hero::after {
+    content: '';
+    width: 100%;
+    height: 300px;
+    display: block;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0% #000000 180%);
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    top: calc(700px - 250px);
+}
+#hero_infos{
+    padding: 0;
+    margin-top: 180px;
+    z-index: 3;
+    position: relative;
+    margin-left: -70px;
+}
+#hero_infos img.logo {
+    margin-bottom: 20px;
+    width: 500px;
+}
+#hero_infos h6 {
+    margin-bottom: 30px;
+}
+#main-content {
+    margin-top: 700px;
+}
+.filme_lista {
+    overflow-x: scroll;
+    list-style: none;
+    white-space: nowrap; /* para ultrapassar a tela*/
+    padding: 20px 0;
+    border: 1 solid transparent;
+    display: block;
+}
+.filme_lista::-webkit-scrollbar {
+    display: none;
+}
+.filme_lista {
+    overflow-x: overlay /* esconde barra de rolagem dos slider*/
+}
+.filme {
+    display: inline-block;
+    width: 250px;
+    margin-right: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow: auto;
+    border: 1 solid transparent;
+    overflow-y: hidden;
+}
+.filme:hover{
+    cursor: pointer;
+    transform: scale(1.2); /* almenta a imagem a passar o mouse*/
+}
+.filme:hover .filme_info{
+    transform: scale(1);
+    transition: 0.5s;
+
+}
+.filme:first-child {
+    margin-left: 50px;
+}
+.filme_info {
+    background-color: #171717;
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+    transform:scale(0); /* some os botões do filme*/
+    z-index: 999;
+    transform: 0.5s;
+}
+.filme_info .col-12 {
+    margin-top: 5px;
+}
+.filme_info .col-12:first-child {
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+.filme_info p {
+    color: #7E7878;
+    font-size: 12px;
+}
+.filme_info p text {
+    color: #fff;
+}
+section {
+    margin-bottom: -100px;
+    position: relative;
+}
+section:hover {
+    z-index: 9;
+}
+
+/* ---------------------MODAL-----------------------------------*/
+.modal-dialog, 
+.modal-content{
+    background-color: #171717;
+}
+.modal-dialog {
+    max-width: 600px;
+}
+.modal-hero {
+    height: 300px;
+    background-image: url(assets/capa-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px;
+}
+.modal-hero::after {
+    content: '';
+    width: 100%;
+    height: 200px;
+    display: block;
+    background: linear-gradient(180deg, rgba(23,23,23,0) 0%, #171717 100%);
+    position: absolute;
+    left: 0;
+    margin-top: -125px;
+    z-index: 1;
+}
+.modal-hero img {
+    width: 250px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+}
+.modal-heros-info {
+    position: relative;
+    z-index: 2;
+}
+.modal-heros-info button:first-child{
+    margin-right: 20px;
+}
+.filme_descricao{
+    font-size: 15px;
+    color: #fff;
+}
+.filme-elenco {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+}
+.filme-elenco text {
+    color: #fff;
+}
+/* -------------------CLASSIFICAÇÃO E ANO DO FILME --------------------*/
+.filme_classificacao{
+    margin-bottom: 30px;
+}
+.relevante_filme {
+    color: rgb(11, 235, 108);
+}
+.temporada_filme {
+    color: #fff;
+}
+.classificacao {
+    padding: 0 4px 3px 2px;
+    background-color: #ffa500;
+    font-style: bold;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 3px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+#lista_episodeos {
+    list-style: none;
+    padding: 0;
+}
+#lista_episodeos li:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.116);
+}
+#lista_episodeos li {
+    padding: 20px;
+}
+#lista_episodeos li p {
+    font-size: 13px;
+}
+
+/* ---------------------SLIDER--------------------------------*/
+#contentSlide {
+    /*position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    z-index: 0;
+    display: flex;*/
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+#contentSlide::-webkit-scrollbar{
+    display: none;
+}
+
+#contentSlide #block{
+    /*position: relative;
+    top: 30px;
+    margin: 0 5px;
+    width: 950px;
+    height: 80px;
+    background: orangered;*/
+    display: inline-block;
+}
+#btn-left{
+    position: absolute;
+    padding: 0;
+    top: 20px;
+    left: 10px;
+    height: 142px;
+    width: 30px;
+    line-height: 80px;
+    text-align: center;
+    color: transparent;
+    z-index: 1;
+    cursor: pointer;
+    user-select: none;
+}
+#btn-left:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #e50914;
+}
+#btn-left p {
+    margin-top: 25px;
+    font-size: 25px;
+}
+#btn-right{
+    position: absolute;
+    padding: 0;
+    top: 20px;
+    right: 0;
+    height: 142px;
+    width: 30px;
+    line-height: 80px;
+    text-align: center;
+    z-index: 1;
+    color: transparent;
+    cursor: pointer;
+    user-select: none;
+}
+#btn-right:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #e50914;
+}
+#btn-right p {
+    margin-top: 25px;
+    font-size: 25px;
+}
+#btn-right:hover{
+    display: block;
+}
